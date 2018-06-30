@@ -1,0 +1,740 @@
+---------------------------------------------------------------
+[ 2018-06-09T10:36:44+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：0.970750s][吞吐率：1.03req/s] [内存消耗：3,102.60kb] [文件加载：64]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.022444s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.026455s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'count',
+  3 => 'earnSum',
+  4 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001998s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.131890s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.011627s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SELECT SUM((sellPrice - dealPrice) * dealQuantity * 100) AS tp_sum FROM `xh_stock_order` WHERE  (  isFreetrial=0 and status=2 and sellPrice - dealPrice > 0 ) LIMIT 1 [ RunTime:0.000270s ]
+[ error ] [8]未定义数组索引: member[E:\www\feichangcelue\runtime\temp\065426375231d8082f01991d1b7869e7.php:24]
+[ error ] [8]未定义数组索引: member[E:\www\feichangcelue\runtime\temp\065426375231d8082f01991d1b7869e7.php:29]
+[ error ] [8]未定义数组索引: member[E:\www\feichangcelue\runtime\temp\065426375231d8082f01991d1b7869e7.php:36]
+[ error ] [8]未定义变量: usableSum[E:\www\feichangcelue\runtime\temp\065426375231d8082f01991d1b7869e7.php:41]
+[ error ] [8]未定义数组索引: member[E:\www\feichangcelue\runtime\temp\065426375231d8082f01991d1b7869e7.php:120]
+---------------------------------------------------------------
+[ 2018-06-09T10:37:01+08:00 ] ::1 ::1 GET /feichangcelue/mobile.html
+[ info ] localhost/feichangcelue/mobile.html [运行时间：0.072408s][吞吐率：13.81req/s] [内存消耗：2,384.70kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'mobile',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=8hg2rfmfmu9eu1i5tr6424dgm3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000244s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.002788s ]
+[ info ] [ RUN ] app\index\controller\Index->mobile[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\mobile.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: member[E:\www\feichangcelue\runtime\temp\affd78ff6be52f7d4dc457e62479f0f4.php:24]
+[ error ] [8]未定义数组索引: member[E:\www\feichangcelue\runtime\temp\affd78ff6be52f7d4dc457e62479f0f4.php:29]
+[ error ] [8]未定义数组索引: member[E:\www\feichangcelue\runtime\temp\affd78ff6be52f7d4dc457e62479f0f4.php:36]
+[ error ] [8]未定义变量: usableSum[E:\www\feichangcelue\runtime\temp\affd78ff6be52f7d4dc457e62479f0f4.php:41]
+---------------------------------------------------------------
+[ 2018-06-09T10:37:03+08:00 ] ::1 ::1 GET /feichangcelue/index/index.html
+[ info ] localhost/feichangcelue/index/index.html [运行时间：0.416045s][吞吐率：2.40req/s] [内存消耗：3,185.13kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/mobile.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=8hg2rfmfmu9eu1i5tr6424dgm3',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000385s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004227s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'count',
+  3 => 'earnSum',
+  4 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000815s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000369s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.010241s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.000291s ]
+[ sql ] [ SQL ] SELECT SUM((sellPrice - dealPrice) * dealQuantity * 100) AS tp_sum FROM `xh_stock_order` WHERE  (  isFreetrial=0 and status=2 and sellPrice - dealPrice > 0 ) LIMIT 1 [ RunTime:0.000263s ]
+[ error ] [8]Trying to get property of non-object[E:\www\feichangcelue\application\index\controller\Index.php:63]
+---------------------------------------------------------------
+[ 2018-06-09T10:37:03+08:00 ] ::1 ::1 GET /feichangcelue/index/public/stock/css/reset.css
+[ info ] localhost/feichangcelue/index/public/stock/css/reset.css [运行时间：0.510678s][吞吐率：1.96req/s] [内存消耗：3,185.37kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://localhost/feichangcelue/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=8hg2rfmfmu9eu1i5tr6424dgm3',
+)
+[ info ] [ PARAM ] array (
+  'public' => 'stock',
+  'css' => 'reset.css',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000376s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005438s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'count',
+  3 => 'earnSum',
+  4 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000999s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000400s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.024909s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.000285s ]
+[ sql ] [ SQL ] SELECT SUM((sellPrice - dealPrice) * dealQuantity * 100) AS tp_sum FROM `xh_stock_order` WHERE  (  isFreetrial=0 and status=2 and sellPrice - dealPrice > 0 ) LIMIT 1 [ RunTime:0.000297s ]
+[ error ] [8]Trying to get property of non-object[E:\www\feichangcelue\application\index\controller\Index.php:63]
+---------------------------------------------------------------
+[ 2018-06-09T10:37:04+08:00 ] ::1 ::1 GET /feichangcelue/index/public/stock/js/sizes.js
+[ info ] localhost/feichangcelue/index/public/stock/js/sizes.js [运行时间：0.713163s][吞吐率：1.40req/s] [内存消耗：3,185.31kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/feichangcelue/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=8hg2rfmfmu9eu1i5tr6424dgm3',
+)
+[ info ] [ PARAM ] array (
+  'public' => 'stock',
+  'js' => 'sizes.js',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000352s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.003274s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'count',
+  3 => 'earnSum',
+  4 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010267s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000478s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.012764s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.000339s ]
+[ sql ] [ SQL ] SELECT SUM((sellPrice - dealPrice) * dealQuantity * 100) AS tp_sum FROM `xh_stock_order` WHERE  (  isFreetrial=0 and status=2 and sellPrice - dealPrice > 0 ) LIMIT 1 [ RunTime:0.000315s ]
+[ error ] [8]Trying to get property of non-object[E:\www\feichangcelue\application\index\controller\Index.php:63]
+---------------------------------------------------------------
+[ 2018-06-09T10:37:04+08:00 ] ::1 ::1 GET /feichangcelue/index/public/stock/css/swiper-3.3.1.min.css
+[ info ] localhost/feichangcelue/index/public/stock/css/swiper-3.3.1.min.css [运行时间：0.917121s][吞吐率：1.09req/s] [内存消耗：3,185.54kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://localhost/feichangcelue/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=8hg2rfmfmu9eu1i5tr6424dgm3',
+)
+[ info ] [ PARAM ] array (
+  'public' => 'stock',
+  'css' => 'swiper-3.3.1.min.css',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000497s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004631s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'count',
+  3 => 'earnSum',
+  4 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010401s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000319s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.010811s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.000323s ]
+[ sql ] [ SQL ] SELECT SUM((sellPrice - dealPrice) * dealQuantity * 100) AS tp_sum FROM `xh_stock_order` WHERE  (  isFreetrial=0 and status=2 and sellPrice - dealPrice > 0 ) LIMIT 1 [ RunTime:0.000259s ]
+[ error ] [8]Trying to get property of non-object[E:\www\feichangcelue\application\index\controller\Index.php:63]
+---------------------------------------------------------------
+[ 2018-06-09T10:37:04+08:00 ] ::1 ::1 GET /feichangcelue/index/public/stock/css/style.css
+[ info ] localhost/feichangcelue/index/public/stock/css/style.css [运行时间：1.119698s][吞吐率：0.89req/s] [内存消耗：3,185.38kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36',
+  'accept' => 'text/css,*/*;q=0.1',
+  'referer' => 'http://localhost/feichangcelue/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=8hg2rfmfmu9eu1i5tr6424dgm3',
+)
+[ info ] [ PARAM ] array (
+  'public' => 'stock',
+  'css' => 'style.css',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000478s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004607s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'count',
+  3 => 'earnSum',
+  4 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000718s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.013724s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.000316s ]
+[ sql ] [ SQL ] SELECT SUM((sellPrice - dealPrice) * dealQuantity * 100) AS tp_sum FROM `xh_stock_order` WHERE  (  isFreetrial=0 and status=2 and sellPrice - dealPrice > 0 ) LIMIT 1 [ RunTime:0.000301s ]
+[ error ] [8]Trying to get property of non-object[E:\www\feichangcelue\application\index\controller\Index.php:63]
+---------------------------------------------------------------
+[ 2018-06-09T10:37:04+08:00 ] ::1 ::1 GET /feichangcelue/index/public/stock/js/jquery-1.11.1.min.js
+[ info ] localhost/feichangcelue/index/public/stock/js/jquery-1.11.1.min.js [运行时间：0.398591s][吞吐率：2.51req/s] [内存消耗：3,185.43kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/feichangcelue/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=8hg2rfmfmu9eu1i5tr6424dgm3',
+)
+[ info ] [ PARAM ] array (
+  'public' => 'stock',
+  'js' => 'jquery-1.11.1.min.js',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000245s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.003566s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'count',
+  3 => 'earnSum',
+  4 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000652s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000318s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.015759s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.000287s ]
+[ sql ] [ SQL ] SELECT SUM((sellPrice - dealPrice) * dealQuantity * 100) AS tp_sum FROM `xh_stock_order` WHERE  (  isFreetrial=0 and status=2 and sellPrice - dealPrice > 0 ) LIMIT 1 [ RunTime:0.000237s ]
+[ error ] [8]Trying to get property of non-object[E:\www\feichangcelue\application\index\controller\Index.php:63]
+---------------------------------------------------------------
+[ 2018-06-09T10:37:04+08:00 ] ::1 ::1 GET /feichangcelue/index/public/stock/js/swiper.jquery.min.js
+[ info ] localhost/feichangcelue/index/public/stock/js/swiper.jquery.min.js [运行时间：0.402376s][吞吐率：2.49req/s] [内存消耗：3,185.43kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/feichangcelue/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=8hg2rfmfmu9eu1i5tr6424dgm3',
+)
+[ info ] [ PARAM ] array (
+  'public' => 'stock',
+  'js' => 'swiper.jquery.min.js',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000333s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004774s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'count',
+  3 => 'earnSum',
+  4 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000691s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.014075s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.000595s ]
+[ sql ] [ SQL ] SELECT SUM((sellPrice - dealPrice) * dealQuantity * 100) AS tp_sum FROM `xh_stock_order` WHERE  (  isFreetrial=0 and status=2 and sellPrice - dealPrice > 0 ) LIMIT 1 [ RunTime:0.000451s ]
+[ error ] [8]Trying to get property of non-object[E:\www\feichangcelue\application\index\controller\Index.php:63]
+---------------------------------------------------------------
+[ 2018-06-09T10:37:05+08:00 ] ::1 ::1 GET /feichangcelue/index/public/stock/img/banner1.png
+[ info ] localhost/feichangcelue/index/public/stock/img/banner1.png [运行时间：0.613022s][吞吐率：1.63req/s] [内存消耗：3,185.47kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=8hg2rfmfmu9eu1i5tr6424dgm3',
+)
+[ info ] [ PARAM ] array (
+  'public' => 'stock',
+  'img' => 'banner1.png',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000293s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004751s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'count',
+  3 => 'earnSum',
+  4 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010272s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000334s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.015050s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.000342s ]
+[ sql ] [ SQL ] SELECT SUM((sellPrice - dealPrice) * dealQuantity * 100) AS tp_sum FROM `xh_stock_order` WHERE  (  isFreetrial=0 and status=2 and sellPrice - dealPrice > 0 ) LIMIT 1 [ RunTime:0.000211s ]
+[ error ] [8]Trying to get property of non-object[E:\www\feichangcelue\application\index\controller\Index.php:63]
+---------------------------------------------------------------
+[ 2018-06-09T10:37:05+08:00 ] ::1 ::1 GET /feichangcelue/index/public/stock/img/ri.png
+[ info ] localhost/feichangcelue/index/public/stock/img/ri.png [运行时间：0.825237s][吞吐率：1.21req/s] [内存消耗：3,185.34kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=8hg2rfmfmu9eu1i5tr6424dgm3',
+)
+[ info ] [ PARAM ] array (
+  'public' => 'stock',
+  'img' => 'ri.png',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000374s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004184s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'count',
+  3 => 'earnSum',
+  4 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000746s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000407s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.030639s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.000311s ]
+[ sql ] [ SQL ] SELECT SUM((sellPrice - dealPrice) * dealQuantity * 100) AS tp_sum FROM `xh_stock_order` WHERE  (  isFreetrial=0 and status=2 and sellPrice - dealPrice > 0 ) LIMIT 1 [ RunTime:0.000238s ]
+[ error ] [8]Trying to get property of non-object[E:\www\feichangcelue\application\index\controller\Index.php:63]
+---------------------------------------------------------------
+[ 2018-06-09T10:37:05+08:00 ] ::1 ::1 GET /feichangcelue/index/public/stock/img/mian.png
+[ info ] localhost/feichangcelue/index/public/stock/img/mian.png [运行时间：1.025834s][吞吐率：0.97req/s] [内存消耗：3,185.45kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=8hg2rfmfmu9eu1i5tr6424dgm3',
+)
+[ info ] [ PARAM ] array (
+  'public' => 'stock',
+  'img' => 'mian.png',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000530s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004328s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'count',
+  3 => 'earnSum',
+  4 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000685s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000403s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.012306s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.000289s ]
+[ sql ] [ SQL ] SELECT SUM((sellPrice - dealPrice) * dealQuantity * 100) AS tp_sum FROM `xh_stock_order` WHERE  (  isFreetrial=0 and status=2 and sellPrice - dealPrice > 0 ) LIMIT 1 [ RunTime:0.000205s ]
+[ error ] [8]Trying to get property of non-object[E:\www\feichangcelue\application\index\controller\Index.php:63]
+---------------------------------------------------------------
+[ 2018-06-09T10:37:05+08:00 ] ::1 ::1 GET /feichangcelue/index/public/stock/img/yue.png
+[ info ] localhost/feichangcelue/index/public/stock/img/yue.png [运行时间：1.237034s][吞吐率：0.81req/s] [内存消耗：3,185.38kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=8hg2rfmfmu9eu1i5tr6424dgm3',
+)
+[ info ] [ PARAM ] array (
+  'public' => 'stock',
+  'img' => 'yue.png',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000590s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004120s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'count',
+  3 => 'earnSum',
+  4 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010174s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000362s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.010924s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.000243s ]
+[ sql ] [ SQL ] SELECT SUM((sellPrice - dealPrice) * dealQuantity * 100) AS tp_sum FROM `xh_stock_order` WHERE  (  isFreetrial=0 and status=2 and sellPrice - dealPrice > 0 ) LIMIT 1 [ RunTime:0.000270s ]
+[ error ] [8]Trying to get property of non-object[E:\www\feichangcelue\application\index\controller\Index.php:63]
+---------------------------------------------------------------
+[ 2018-06-09T10:37:05+08:00 ] ::1 ::1 GET /feichangcelue/index/public/stock/img/liu.png
+[ info ] localhost/feichangcelue/index/public/stock/img/liu.png [运行时间：1.262458s][吞吐率：0.79req/s] [内存消耗：3,185.37kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=8hg2rfmfmu9eu1i5tr6424dgm3',
+)
+[ info ] [ PARAM ] array (
+  'public' => 'stock',
+  'img' => 'liu.png',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000527s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005117s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'count',
+  3 => 'earnSum',
+  4 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010804s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.010685s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.000260s ]
+[ sql ] [ SQL ] SELECT SUM((sellPrice - dealPrice) * dealQuantity * 100) AS tp_sum FROM `xh_stock_order` WHERE  (  isFreetrial=0 and status=2 and sellPrice - dealPrice > 0 ) LIMIT 1 [ RunTime:0.000220s ]
+[ error ] [8]Trying to get property of non-object[E:\www\feichangcelue\application\index\controller\Index.php:63]
+---------------------------------------------------------------
+[ 2018-06-09T10:37:06+08:00 ] ::1 ::1 GET /feichangcelue/index/public/stock/img/cai.png
+[ info ] localhost/feichangcelue/index/public/stock/img/cai.png [运行时间：1.263418s][吞吐率：0.79req/s] [内存消耗：3,185.37kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Mobile Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=8hg2rfmfmu9eu1i5tr6424dgm3',
+)
+[ info ] [ PARAM ] array (
+  'public' => 'stock',
+  'img' => 'cai.png',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000485s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004663s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ E:\www\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] E:\www\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'count',
+  3 => 'earnSum',
+  4 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010405s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000358s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.012989s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.000310s ]
+[ sql ] [ SQL ] SELECT SUM((sellPrice - dealPrice) * dealQuantity * 100) AS tp_sum FROM `xh_stock_order` WHERE  (  isFreetrial=0 and status=2 and sellPrice - dealPrice > 0 ) LIMIT 1 [ RunTime:0.000291s ]
+[ error ] [8]Trying to get property of non-object[E:\www\feichangcelue\application\index\controller\Index.php:63]

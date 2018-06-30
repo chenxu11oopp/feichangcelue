@@ -1,0 +1,8 @@
+---------------------------------------------------------------
+[ 2018-06-08T14:40:51+08:00 ] ::1 ::1 GET /feichangcelue/authllpay_wap.html?bankCard=230203199002101010&realName=%E9%99%88%E7%BB%AA&IDCard=230203199002101010&b-pay-amount=1
+[ error ] [8192]mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead.[E:\www\feichangcelue\application\index\controller\Lianlianauthpay.php:266]
+[ error ] [1]Call to undefined function openssl_get_privatekey()[E:\www\feichangcelue\application\llpay_auth_wap\lib\llpay_rsa.function.php:23]
+---------------------------------------------------------------
+[ 2018-06-08T14:42:46+08:00 ] ::1 ::1 GET /feichangcelue/authllpay_wap.html?bankCard=622122308016278452&realName=%E9%99%88%E7%BB%AA&IDCard=230203199002101010&b-pay-amount=1
+[ error ] [8192]mysql_escape_string(): This function is deprecated; use mysql_real_escape_string() instead.[E:\www\feichangcelue\application\index\controller\Lianlianauthpay.php:266]
+[ error ] [1]Call to undefined function openssl_get_privatekey()[E:\www\feichangcelue\application\llpay_auth_wap\lib\llpay_rsa.function.php:23]

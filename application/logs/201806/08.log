@@ -1,0 +1,84 @@
+---------------------------------------------------------------
+[ 2018-06-08T14:40:51+08:00 ] ::1 ::1 GET /feichangcelue/authllpay_wap.html?bankCard=230203199002101010&realName=%E9%99%88%E7%BB%AA&IDCard=230203199002101010&b-pay-amount=1
+[ info ] localhost/feichangcelue/authllpay_wap.html?bankCard=230203199002101010&realName=%E9%99%88%E7%BB%AA&IDCard=230203199002101010&b-pay-amount=1 [运行时间：0.443326s][吞吐率：2.26req/s] [内存消耗：3,115.78kb] [文件加载：69]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lianlianauthpay',
+    2 => 'authllpay_wap',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/ucenter/quick_pay.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526269519725; pgv_pvi=6518467584; ECS_ID=2d8de282c275a26c723bdbe24413f8cbf5a9ea34; PHPSESSID=ct627lpb309vebgs7u16uuc857',
+)
+[ info ] [ PARAM ] array (
+  'bankCard' => '230203199002101010',
+  'realName' => '陈绪',
+  'IDCard' => '230203199002101010',
+  'b-pay-amount' => '1',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000265s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.003056s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\index\controller\Lianlianauthpay->authllpay_wap[ E:\www\feichangcelue\application\index\controller\Lianlianauthpay.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010724s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011959s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1111 ) LIMIT 1 [ RunTime:0.000326s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member_recharge` [ RunTime:0.043061s ]
+[ sql ] [ SQL ] INSERT INTO `xh_member_recharge` (`memberId` , `amount` , `status` , `no_order` , `createTime`) VALUES (1111 , 1 , 0 , '11111528440051790869' , '2018-06-08 14:40:51') [ RunTime:0.047036s ]
+---------------------------------------------------------------
+[ 2018-06-08T14:42:46+08:00 ] ::1 ::1 GET /feichangcelue/authllpay_wap.html?bankCard=622122308016278452&realName=%E9%99%88%E7%BB%AA&IDCard=230203199002101010&b-pay-amount=1
+[ info ] localhost/feichangcelue/authllpay_wap.html?bankCard=622122308016278452&realName=%E9%99%88%E7%BB%AA&IDCard=230203199002101010&b-pay-amount=1 [运行时间：0.082720s][吞吐率：12.09req/s] [内存消耗：3,115.77kb] [文件加载：69]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] E:\www\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'lianlianauthpay',
+    2 => 'authllpay_wap',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.181 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/ucenter/quick_pay.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'bdshare_firstime=1526269519725; pgv_pvi=6518467584; ECS_ID=2d8de282c275a26c723bdbe24413f8cbf5a9ea34; PHPSESSID=ct627lpb309vebgs7u16uuc857',
+)
+[ info ] [ PARAM ] array (
+  'bankCard' => '622122308016278452',
+  'realName' => '陈绪',
+  'IDCard' => '230203199002101010',
+  'b-pay-amount' => '1',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000315s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.003263s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ info ] [ RUN ] app\index\controller\Lianlianauthpay->authllpay_wap[ E:\www\feichangcelue\application\index\controller\Lianlianauthpay.php ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011097s ] mysql:dbname=feichangmoulue;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012360s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1111 ) LIMIT 1 [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member_recharge` [ RunTime:0.010163s ]
+[ sql ] [ SQL ] INSERT INTO `xh_member_recharge` (`memberId` , `amount` , `status` , `no_order` , `createTime`) VALUES (1111 , 1 , 0 , '11111528440166103634' , '2018-06-08 14:42:46') [ RunTime:0.000614s ]
