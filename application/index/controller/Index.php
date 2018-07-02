@@ -367,7 +367,7 @@ class Index extends Home
                 $_SESSION['mobileCode'] = $mobileCode;
                 $_SESSION['mobile'] = $mobile;
             }
-            $content = "【思锐科技】尊敬的用户，您本次验证码为{$mobileCode}，十分钟内有效";
+            $content = "尊敬的用户，您本次验证码为{$mobileCode}，十分钟内有效";
             //$content = urlencode($content);
 
             $url = "http://120.26.38.54:8000/interface/smssend.aspx";
