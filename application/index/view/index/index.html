@@ -5,13 +5,13 @@
 </head>
 <body class="index_body">
 {include file="public:top" /}
-<link href="/public/static/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="/public/static/home/css/index.css"/>
-<link rel="stylesheet" type="text/css" href="/public/static/home/css/buy.css"/>
+<link href="./public/static/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./public/static/home/css/index.css"/>
+<link rel="stylesheet" type="text/css" href="./public/static/home/css/buy.css"/>
 <!--banner-->
 	<div class="banner_login br-w100">
 		<div class="bBanner br-w100">
-			<div class="w1024">
+			<!--<div class="w1024">
 					<div class="login_main" {if condition="$_SESSION['member'] neq '' "} style="display: none;" {/if}>
 					<p>用户登录</p>
 					<from>
@@ -20,12 +20,12 @@
 						<input type="password" name="" id="password" placeholder="密码"/>
 						<div id="err2" class="err">请输入正确密码</div>
 						<div class="login_box">
-							<a href="javascript:;" class="btn_login">登录</a>
-							<a href="./reg.html" class="btn_reg">注册</a>
+							<a href="javascript:void(0);" class="btn_login">登录</a>
+							<a href="javascript:void(0);" class="btn_reg">注册</a>
 						</div>
 					</from>
 				</div>
-			</div>
+			</div>-->
 			<!--轮播图-->
 			<div class="home_banner">
 				<div id="myCarousel" class="carousel slide">
@@ -61,15 +61,15 @@
 	<div class="AS_box br-w100">
 		<!--3个盒子-->
 		<div class="three_box w1024 br-clearfix">
-			<div class="three_item br-fl"><a href="/company.html" style="display: block;"><img src="./public/static/home/img/p (3).png"/></a>
-				<p class="tit">一分钟了解非常谋略</p>
+			<div class="three_item br-fl"><a href="javascript:void(0);" style="display: block;"><img src="./public/static/home/img/p (3).png"/></a>
+				<p class="tit">一分钟了解尚牛在线</p>
 				<p class="tib">全新的投资人策略匹配平台</p>
 			</div>
-			<div class="three_item br-fl"><a href="javascript:;" style="display: block;"><img src="./public/static/home/img/p (2).png"/></a>
+			<div class="three_item br-fl"><a href="javascript:void(0);" style="display: block;"><img src="./public/static/home/img/p (2).png"/></a>
 				<p class="tit">用心服务</p>
 				<p class="tib">一对一专业客服（电话 微信 QQ）</br>全程指导</p>
 			</div>
-			<div class="three_item br-fl"><a href="javascript:;" style="display: block;"><img src="./public/static/home/img/p (1).png"/></a>
+			<div class="three_item br-fl"><a href="javascript:void(0);" style="display: block;"><img src="./public/static/home/img/p (1).png"/></a>
 				<p class="P_block" style="float: left;">累计匹配策略 </br><span>{$count + 256}</span>条</p>
 				<p class="P_block" style="float: right;">累计盈利</br><span>{:round($earnSum + 5758000, 2 ) }</span>元</p>
 			</div>
@@ -80,23 +80,23 @@
 			<p class="br-ml-bt">点买A股</p>
 			<div class="AS_contImg br-clearfix">
 				<div class="three_item br-fl">
-					<div class="ASitem_top"><img src="../public/static/home/img/01.png"/></div>
+					<div class="ASitem_top"><img src="./public/static/home/img/01.png"/></div>
 					<div class="ASitem_bot br-clearfix">
-						<span class="ASbot_l br-fl"><img src="../public/static/home/img/num (1).png"/></span>
+						<span class="ASbot_l br-fl"><img src="./public/static/home/img/num (1).png"/></span>
 						<p class="ASbot_r br-fl">点买人只需冻结最低1250元履<br>约保证金支付45元交易综合费</p>
 					</div>
 				</div>
 				<div class="three_item br-fl">
-					<div class="ASitem_top"><img src="../public/static/home/img/02.png"/></div>
+					<div class="ASitem_top"><img src="./public/static/home/img/02.png"/></div>
 					<div class="ASitem_bot br-clearfix">
-						<span class="ASbot_l br-fl"><img src="../public/static/home/img/num (2).png"/></span>
+						<span class="ASbot_l br-fl"><img src="./public/static/home/img/num (2).png"/></span>
 						<p class="ASbot_r br-fl">即刻提交谋略系统智能匹<br>配投资人，投资人实施买入</p>
 					</div>
 				</div>
 				<div class="three_item br-fl">
-					<div class="ASitem_top"><img src="../public/static/home/img/03.png"/></div>
+					<div class="ASitem_top"><img src="./public/static/home/img/03.png"/></div>
 					<div class="ASitem_bot br-clearfix">
-						<span class="ASbot_l br-fl"><img src="../public/static/home/img/num (3).png"/></span>
+						<span class="ASbot_l br-fl"><img src="./public/static/home/img/num (3).png"/></span>
 						<p class="ASbot_r br-fl">谋略到期后单笔1万元交<br>易本金获得90%交易盈利</p>
 					</div>
 				</div>
@@ -109,7 +109,7 @@
 			<div class="high_l br-fl ">
 				<h1>获得更高收益</h1>
 				<p>提供投资谋略金和投资人分享高额回报</p>
-				<a href="./buy.html" class="">进入点买A股</a>
+				<a href="javascript:void(0);" class="">进入点买A股</a>
 			</div>
 			<div class="high_r br-fr ">
 				<table>
@@ -161,10 +161,10 @@
 			<div class="br-ml-line"></div>
 			<p class="br-ml-bt">我们的服务</p>
 			<div class="service_box br-clearfix">
-				<h1>A股点买去<span>非常谋略</span></h1>
+				<h1>A股点买去<span>尚牛在线</span></h1>
 				<p class="sp1">“股票点买最安全平台”</p>
 				<p class="sp2">急速撮合<br>仅需填写简单资料<br>提交谋略<br>就能马上提交投资人赚钱</p>
-				<a href="./reg.html">立即注册</a>
+				<a href="javascript:void(0);">立即注册</a>
 			</div>
 	 	</div>
 	 </div>
