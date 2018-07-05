@@ -8,15 +8,15 @@
     <div class="h_top br-w100">
         <div class="w1024 br-clearfix">
             <div class="h_topL br-fl">
-                服务热线：{$phone}
+                服务热线：4001665652
                 <a id="qqicon" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin={$QQ}&amp;site=qq&amp;menu=yes"></a>
             </div>
 
 
-            <div id="page_shared_layout_login" class="h_topR br-fr" {if condition="$_SESSION['member'] neq '' "} style="display: none;" {/if} >
-                <a class="login" href="javascript:;">登录</a>
-                <a class="register" href="./reg.html">注册</a>
-            </div>
+            <!--<div id="page_shared_layout_login" class="h_topR br-fr" {if condition="$_SESSION['member'] neq '' "} style="display: none;" {/if} >
+                <a class="login" href="javascript:void(0);">登录</a>
+                <a class="register" href="javascript:void(0);">注册</a>
+            </div>-->
 
             <ul id="page_shared_layout_unlogin" class="top-links f-right" {if condition="$_SESSION['member'] eq '' "} style="display: none;" {/if}>
                 <!--<li class="show-logout" style="display: list-item;"><a href="javascript:_hmt.push(['_trackEvent', 'login', 'click', 'head-login',1]);" name="popup-user-login-click">登录</a></li>-->
@@ -50,12 +50,13 @@
     </div>
     <div class="h_bot br-w100">
         <div class="w1024 br-clearfix">
-            <div class="h_botL br-fl">
-                <a href="/"><img src="./public/static/home/img/logo.png" style="height:60px; " /></a>
-            </div>
+            <!--<div class="h_botL br-fl">
+                <a href="/"><img src="./public/static/home/img/moblie/fcml.png" style="height:60px; " /></a>
+            </div>-->
             <div class="h_botR br-fr">
                 <ul class="br-clearfix" id="menu-ul">
-                    <li class="br-fl"><a href="{:url('index')}" class="active">首页</a></li>
+                    <!--<li class="br-fl"><a href="{:url('index')}" class="active">首页</a></li>-->
+                    <li class="br-fl"><a href="./index.html" class="active">首页</a></li>
                    <!-- <li class="br-fl"><a href="./buy.html">A股点买</a></li>
                     <li class="br-fl"><a href="./freetrial.html">免费体验</a></li>-->
                     <li class="br-fl"><a href="./mobile.html">手机版</a></li>
